@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\raw_animated_gif.gif.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\raw\\animated_gif.gif"
+    },
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\layout_activity_gif_main.xml.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\layout\\activity_gif_main.xml"
+    },
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher.png.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\drawable-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\raw_animated_gif_big.gif.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\raw\\animated_gif_big.gif"
+    },
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher.png.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher.png.flat",
+        "source": "D:\\AADworkspace\\Alphalearning2\\gifimageviewlib\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    }
+]
