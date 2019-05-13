@@ -13,16 +13,70 @@
 
     </string-array>
     <string name="descriptionfora">
-        A is the first letter and the first vowel of the modern English alphabet and the ISO basic Latin alphabet.[1] It is similar to the Ancient Greek letter alpha, from which it derives.
+        A is the first letter and the first vowel of the modern English alphabet and the ISO basic Latin alphabet. It is similar to the Ancient Greek letter alpha, from which it derives.
         The uppercase version consists of the two slanting sides of a triangle, crossed in the middle by a horizontal bar.
         The lowercase version can be written in two forms: the double-storey a and single-storey ɑ.
         The latter is commonly used in handwriting and fonts based on it, especially fonts intended to be read by children, and is also found in italic type.
+    </string>
+    <string name="descriptionforb">
+        B or b is the second letter of the ISO basic Latin alphabet.
+        It represents the voiced bilabial stop in many languages, including English. In some other languages, it is used to represent other bilabial consonants.
+    </string>
+    <string name="descriptionforc">
+       C is the third letter in the English alphabet and a letter of the alphabets of many other writing systems which inherited it from the Latin alphabet.
+        It is also the third letter of the ISO basic Latin alphabet.
+    </string>
+    <string name="descriptionford">
+       D is the fourth letter of the modern English alphabet and the ISO basic Latin alphabet.
+    </string>
+    <string name="descriptionfore">
+        E is the fifth letter and the second vowel in the modern English alphabet and the ISO basic Latin alphabet.
+        It is the most commonly used letter in many languages, including Czech, Danish, Dutch, English, French, German, Hungarian, Latin, Latvian, Norwegian, Spanish, and Swedish.
     </string>
 
 
     <string name="aspeech">
         /ˈeɪ/
     </string>
+    <string name="bspeech">
+         /biː/
+    </string>
+    <string name="cspeech">
+        /siː/
+    </string>
+    <string name="dspeech">
+         /diː/
+    </string>
+    <string name="espeech">
+         /iː/
+    </string>
+
+    <string name="aexample">
+        Apple
+        Airplane
+        Ace
+    </string>
+    <string name="bexample">
+         Baby
+        Banana
+        Brown
+    </string>
+    <string name="cexample">
+        CD
+        Cup
+        Candy
+    </string>
+    <string name="dexample">
+         Doll
+        Drink
+        Draw
+    </string>
+    <string name="eexample">
+         Example
+        Eat
+        Evening
+    </string>
+
 
 
 

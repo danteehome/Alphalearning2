@@ -33,12 +33,27 @@ public class Alphaadapter extends ArrayAdapter<Alphalistviewconstructor> {
 
 
             }
-            ImageView imageView = (ImageView) v.findViewById(R.id.imageView);
+            ImageView imageView = (ImageView) v.findViewById(R.id.imageViewalpha);
             TextView textViewName = (TextView) v.findViewById(R.id.textViewName);
             TextView textViewDetail = (TextView) v.findViewById(R.id.textViewDetail);
             imageView.setImageResource(alphalistviewconstructors.get(position).getPhoto());
             textViewName.setText(alphalistviewconstructors.get(position).getName());
-            textViewDetail.setText(alphalistviewconstructors.get(position).getDetails());
+            String dummy;
+
+            if (alphalistviewconstructors.get(position).getDetails() == "1") {
+                dummy="1st";
+                textViewDetail.setText(dummy + " character in Alphabet");
+            }
+            else if (alphalistviewconstructors.get(position).getDetails() == "2"){
+                dummy="2nd";
+                textViewDetail.setText(dummy + " character in Alphabet");
+            }else if (alphalistviewconstructors.get(position).getDetails() == "3"){
+                dummy="3rd";
+                textViewDetail.setText(dummy + " character in Alphabet");
+            }else{
+                textViewDetail.setText(alphalistviewconstructors.get(position).getDetails() + "th character in Alphabet");
+            }
+
         }catch(Exception e){
             e.printStackTrace();
             e.getCause();

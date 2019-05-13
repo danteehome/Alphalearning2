@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private ListView listView;;
     private String[] alphanames;
-    private String[] alphaposition={"1st","2nd","3rd","4th","5th"};
+    private String[] alphaposition={"1","2","3","4","5"};
     public static int[] alphaphotos = {R.drawable.aa,
             R.drawable.bb,
             R.drawable.cc,

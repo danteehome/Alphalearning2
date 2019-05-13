@@ -8,12 +8,11 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewalpha"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:background="@android:color/darker_gray"
         android:padding="8dp"
         android:scaleType="centerCrop" />
     <LinearLayout
@@ -27,13 +26,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="A+a"
+
             android:textSize="16sp" />
         <TextView
             android:id="@+id/textViewDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="details of the candidate"
+            android:text="details of the alphabet"
+
             android:textSize="12sp" />
     </LinearLayout>
 

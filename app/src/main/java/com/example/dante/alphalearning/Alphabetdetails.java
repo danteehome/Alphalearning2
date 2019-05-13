@@ -28,9 +28,8 @@ public class Alphabetdetails extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabetdisplay);
         Intent intent = getIntent();
-        Bundle k = intent.getExtras();
         String flagreceive;
-        Alphainfo all=new Alphainfo(name,sounds,description,examples,gif,speech);
+        Alphainfo all=new Alphainfo(name,sounds,description,examples,gif,speech,photo);
         WebView gif= (WebView) findViewById(R.id.gifdisplay) ;
 
 
@@ -41,24 +40,33 @@ public class Alphabetdetails extends MainActivity {
         final TextView textViewDescription = (TextView) relativeLayout.findViewById(R.id.textViewDescription);
         final TextView textViewExamples = (TextView) relativeLayout.findViewById(R.id.textViewExamples);
         ImageView imageViewphoto = (ImageView) relativeLayout.findViewById(R.id.picture) ;
+        final ImageView imageViewexample = (ImageView) relativeLayout.findViewById(R.id.examplealpha);
         final Button buttonmakesound = (Button) findViewById(R.id.makesound);
         final Button buttonunfold = (Button) findViewById(R.id.button_foldfunction);
 
+        buttonunfold.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textViewDescription.setVisibility(View.VISIBLE);
+                textViewExamples.setVisibility(View.VISIBLE);
+                imageViewexample.setVisibility(View.VISIBLE);
+            }
+        });
 
 
 
-        if (k != null) ;
+        if (intent != null) ;
         {
-            flagreceive= k.getString("flag");
+            flagreceive = getIntent().getStringExtra("flag");
         }
 
         if (flagreceive != null) {
-            switch (flag) {
-                case "1st":
+            switch (flagreceive) {
+                case "1":
                     System.out.println("You pressed the first letter yay");
                     all.setName("Aa");
                     all.setDescription(getString(R.string.descriptionfora));
-                    all.setExamples("apple");
+                    all.setExamples(getString(R.string.aexample));
                     all.setPhoto(R.drawable.aa);
                     all.setSpeech(getString(R.string.aspeech));
 
@@ -72,33 +80,134 @@ public class Alphabetdetails extends MainActivity {
                             mpa.start();
                         }
                     });
-                    buttonunfold.setOnClickListener(new View.OnClickListener() {
+
+
+                    textViewDescription.setText(all.getDescription());
+                    textViewName.setText(all.getName());
+                    textViewExamples.setText(all.getExamples());
+                    textViewSpeech.setText(all.getSpeech());
+                    imageViewphoto.setImageResource(R.drawable.aa);
+                    imageViewexample.setImageResource(R.drawable.apple);
+
+
+
+
+
+
+
+                    break;
+                case "2":
+                    all.setName("Bb");
+                    all.setDescription(getString(R.string.descriptionforb));
+                    all.setExamples(getString(R.string.bexample));
+                    all.setPhoto(R.drawable.bb);
+                    all.setSpeech(getString(R.string.bspeech));
+
+                    ////
+                    gif.loadUrl("file:///android_asset/b_cursiva.gif");
+
+                    final MediaPlayer mpb = MediaPlayer.create(this,R.raw.b);
+                    buttonmakesound.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            textViewDescription.setVisibility(View.VISIBLE);
-                            textViewExamples.setVisibility(View.VISIBLE);
+                            mpb.start();
                         }
                     });
 
                     textViewDescription.setText(all.getDescription());
                     textViewName.setText(all.getName());
-                    textViewExamples.setText(all.getDescription());
+                    textViewExamples.setText(all.getExamples());
                     textViewSpeech.setText(all.getSpeech());
-                    imageViewphoto.setImageResource(R.drawable.aa);
-
-
-
-
-
-
+                    imageViewphoto.setImageResource(R.drawable.bb);
+                    imageViewexample.setImageResource(R.drawable.bananas);
 
                     break;
-                case "2nd":
+                case "3":
+                    all.setName("Cc");
+                    all.setDescription(getString(R.string.descriptionforc));
+                    all.setExamples(getString(R.string.cexample));
+                    all.setPhoto(R.drawable.cc);
+                    all.setSpeech(getString(R.string.cspeech));
+
+                    ////
+                    gif.loadUrl("file:///android_asset/c_cursiva.gif");
+
+                    final MediaPlayer mpc = MediaPlayer.create(this,R.raw.c);
+                    buttonmakesound.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            mpc.start();
+                        }
+                    });
+
+
+                    textViewDescription.setText(all.getDescription());
+                    textViewName.setText(all.getName());
+                    textViewExamples.setText(all.getExamples());
+                    textViewSpeech.setText(all.getSpeech());
+                    imageViewphoto.setImageResource(R.drawable.cc);
+                    imageViewexample.setImageResource(R.drawable.candy);
 
                     break;
+                case "4":
+                    all.setName("Dd");
+                    all.setDescription(getString(R.string.descriptionford));
+                    all.setExamples(getString(R.string.dexample));
+                    all.setPhoto(R.drawable.dd);
+                    all.setSpeech(getString(R.string.dspeech));
+
+                    ////
+                    gif.loadUrl("file:///android_asset/d_cursiva.gif");
+
+                    final MediaPlayer mpd = MediaPlayer.create(this,R.raw.d);
+                    buttonmakesound.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            mpd.start();
+                        }
+                    });
+
+
+                    textViewDescription.setText(all.getDescription());
+                    textViewName.setText(all.getName());
+                    textViewExamples.setText(all.getExamples());
+                    textViewSpeech.setText(all.getSpeech());
+                    imageViewphoto.setImageResource(R.drawable.dd);
+                    imageViewexample.setImageResource(R.drawable.doll);
+                    break;
+                case "5":
+                    all.setName("Ee");
+                    all.setDescription(getString(R.string.descriptionfore));
+                    all.setExamples(getString(R.string.eexample));
+                    all.setPhoto(R.drawable.ee);
+                    all.setSpeech(getString(R.string.espeech));
+
+                    ////
+                    gif.loadUrl("file:///android_asset/e_cursiva.gif");
+
+                    final MediaPlayer mpe = MediaPlayer.create(this,R.raw.e);
+                    buttonmakesound.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            mpe.start();
+                        }
+                    });
+
+
+                    textViewDescription.setText(all.getDescription());
+                    textViewName.setText(all.getName());
+                    textViewExamples.setText(all.getExamples());
+                    textViewSpeech.setText(all.getSpeech());
+                    imageViewphoto.setImageResource(R.drawable.ee);
+                    imageViewexample.setImageResource(R.drawable.evening);
+                    break;
+
+
 
 
             }
+
+
 
             ;
 

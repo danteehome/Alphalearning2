@@ -7,7 +7,7 @@ public class Alphalistviewconstructor {
     private String Name;
     private String Details;
     private int Photo;
-    public Alphalistviewconstructor(String Name, String Details, int photo){
+    public Alphalistviewconstructor(String Name, String Details, int Photo){
         this.Name= Name;
         this.Details=Details;
         this.Photo=Photo; }
