@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/buttonred"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/redbutton" />
+
+    <Button
+        android:id="@+id/buttonyellow"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@+id/buttonred"
+        android:background="@drawable/yellowbutton" />
+
+    <Button
+        android:id="@+id/buttonlime"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/buttonyellow"
+        android:background="@drawable/limebutton"
+        android:gravity="bottom" />
+
+    <Button
+        android:id="@+id/buttonpurple"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/buttonlime"
+        android:background="@drawable/purplebutton"
+        android:gravity="bottom" />
+
+    <Button
+        android:id="@+id/buttondraw"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/buttonerase"
+        android:background="@drawable/drawbutton"
+        android:gravity="bottom" />
+
+    <Button
+        android:id="@+id/buttonerase"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/buttonclear"
+        android:background="@drawable/erasebutton"
+        android:gravity="bottom" />
+
+    <Button
+        android:id="@+id/buttonclear"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/clearbutton" />
+
+    <com.android.graphics.CanvasView
+        android:id="@+id/canvas_drawing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="68dp" />
+
+    <ImageView
+        android:id="@+id/drawImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="68dp"
+        android:contentDescription="background" />
+
+    <WebView
+        android:id="@+id/gif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+
+</RelativeLayout>

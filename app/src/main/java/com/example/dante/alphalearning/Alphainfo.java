@@ -36,6 +36,14 @@ public class Alphainfo {
         this.gif=gif;
         this.name=name;
         this.speech=speech;
+    }
+    public Alphainfo(String name, int sounds,String description, String examples,String speechint,int photo) {
+        this.description = description;
+        this.examples = examples;
+        this.sounds = sounds;
+        this.photo=photo;
+        this.name=name;
+        this.speech=speech;
 
 
     }

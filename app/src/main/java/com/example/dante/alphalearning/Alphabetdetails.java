@@ -1,6 +1,7 @@
 package com.example.dante.alphalearning;
 
 import android.content.Intent;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -10,16 +11,17 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
-
-public class Alphabetdetails extends MainActivity {
+public class Alphabetdetails extends AlphabetList {
     private String name;
     private String speech;
     private String description;
     private String examples;
     private int sounds;
     private int photo;
-    private int gif;
+
+
+    private String flagreceive;
+
 
 
 
@@ -28,9 +30,8 @@ public class Alphabetdetails extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabetdisplay);
         Intent intent = getIntent();
-        String flagreceive;
-        Alphainfo all=new Alphainfo(name,sounds,description,examples,gif,speech,photo);
-        WebView gif= (WebView) findViewById(R.id.gifdisplay) ;
+        Alphainfo all=new Alphainfo(name,sounds,description,examples,speech,photo);
+
 
 
 
@@ -43,17 +44,22 @@ public class Alphabetdetails extends MainActivity {
         final ImageView imageViewexample = (ImageView) relativeLayout.findViewById(R.id.examplealpha);
         final Button buttonmakesound = (Button) findViewById(R.id.makesound);
         final Button buttonunfold = (Button) findViewById(R.id.button_foldfunction);
+        final ImageView toDraw = (ImageView) findViewById(R.id.toDraw);
 
         buttonunfold.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textViewDescription.setVisibility(View.VISIBLE);
-                textViewExamples.setVisibility(View.VISIBLE);
-                imageViewexample.setVisibility(View.VISIBLE);
+                if (textViewDescription.getVisibility() == View.INVISIBLE) {
+                    textViewDescription.setVisibility(View.VISIBLE);
+                    textViewExamples.setVisibility(View.VISIBLE);
+                    imageViewexample.setVisibility(View.VISIBLE);
+                } else {
+                    textViewDescription.setVisibility(View.INVISIBLE);
+                    textViewExamples.setVisibility(View.INVISIBLE);
+                    imageViewexample.setVisibility(View.INVISIBLE);
+                }
             }
         });
-
-
 
         if (intent != null) ;
         {
@@ -62,7 +68,7 @@ public class Alphabetdetails extends MainActivity {
 
         if (flagreceive != null) {
             switch (flagreceive) {
-                case "1":
+                case "a":
                     System.out.println("You pressed the first letter yay");
                     all.setName("Aa");
                     all.setDescription(getString(R.string.descriptionfora));
@@ -70,8 +76,6 @@ public class Alphabetdetails extends MainActivity {
                     all.setPhoto(R.drawable.aa);
                     all.setSpeech(getString(R.string.aspeech));
 
-                    ////
-                    gif.loadUrl("file:///android_asset/a_cursiva.gif");
 
                     final MediaPlayer mpa = MediaPlayer.create(this,R.raw.a_gb_4);
                     buttonmakesound.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +85,6 @@ public class Alphabetdetails extends MainActivity {
                         }
                     });
 
-
                     textViewDescription.setText(all.getDescription());
                     textViewName.setText(all.getName());
                     textViewExamples.setText(all.getExamples());
@@ -89,14 +92,8 @@ public class Alphabetdetails extends MainActivity {
                     imageViewphoto.setImageResource(R.drawable.aa);
                     imageViewexample.setImageResource(R.drawable.apple);
 
-
-
-
-
-
-
                     break;
-                case "2":
+                case "b":
                     all.setName("Bb");
                     all.setDescription(getString(R.string.descriptionforb));
                     all.setExamples(getString(R.string.bexample));
@@ -104,7 +101,7 @@ public class Alphabetdetails extends MainActivity {
                     all.setSpeech(getString(R.string.bspeech));
 
                     ////
-                    gif.loadUrl("file:///android_asset/b_cursiva.gif");
+
 
                     final MediaPlayer mpb = MediaPlayer.create(this,R.raw.b);
                     buttonmakesound.setOnClickListener(new View.OnClickListener() {
@@ -122,7 +119,7 @@ public class Alphabetdetails extends MainActivity {
                     imageViewexample.setImageResource(R.drawable.bananas);
 
                     break;
-                case "3":
+                case "c":
                     all.setName("Cc");
                     all.setDescription(getString(R.string.descriptionforc));
                     all.setExamples(getString(R.string.cexample));
@@ -130,7 +127,7 @@ public class Alphabetdetails extends MainActivity {
                     all.setSpeech(getString(R.string.cspeech));
 
                     ////
-                    gif.loadUrl("file:///android_asset/c_cursiva.gif");
+
 
                     final MediaPlayer mpc = MediaPlayer.create(this,R.raw.c);
                     buttonmakesound.setOnClickListener(new View.OnClickListener() {
@@ -149,7 +146,7 @@ public class Alphabetdetails extends MainActivity {
                     imageViewexample.setImageResource(R.drawable.candy);
 
                     break;
-                case "4":
+                case "d":
                     all.setName("Dd");
                     all.setDescription(getString(R.string.descriptionford));
                     all.setExamples(getString(R.string.dexample));
@@ -157,7 +154,7 @@ public class Alphabetdetails extends MainActivity {
                     all.setSpeech(getString(R.string.dspeech));
 
                     ////
-                    gif.loadUrl("file:///android_asset/d_cursiva.gif");
+
 
                     final MediaPlayer mpd = MediaPlayer.create(this,R.raw.d);
                     buttonmakesound.setOnClickListener(new View.OnClickListener() {
@@ -175,7 +172,7 @@ public class Alphabetdetails extends MainActivity {
                     imageViewphoto.setImageResource(R.drawable.dd);
                     imageViewexample.setImageResource(R.drawable.doll);
                     break;
-                case "5":
+                case "e":
                     all.setName("Ee");
                     all.setDescription(getString(R.string.descriptionfore));
                     all.setExamples(getString(R.string.eexample));
@@ -183,7 +180,7 @@ public class Alphabetdetails extends MainActivity {
                     all.setSpeech(getString(R.string.espeech));
 
                     ////
-                    gif.loadUrl("file:///android_asset/e_cursiva.gif");
+
 
                     final MediaPlayer mpe = MediaPlayer.create(this,R.raw.e);
                     buttonmakesound.setOnClickListener(new View.OnClickListener() {
@@ -202,15 +199,16 @@ public class Alphabetdetails extends MainActivity {
                     imageViewexample.setImageResource(R.drawable.evening);
                     break;
 
+            };
+            toDraw.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent= new Intent(getApplicationContext(),Draw.class);
+                    intent.putExtra("flag",flagreceive);
+                    startActivity(intent);
 
-
-
-            }
-
-
-
-            ;
-
+                }
+            });
 
 
 

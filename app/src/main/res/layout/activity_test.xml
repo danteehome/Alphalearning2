@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/test">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <WebView
+            android:id="@+id/qbackground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <com.lukedeighton.wheelview.WheelView
+        android:id="@+id/twheelview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical"
+        app:repeatItems="true"
+        app:rotatableWheelDrawable="false"
+        app:selectionAngle="90.0"
+        app:wheelColor="@color/yellow_a100"
+        app:wheelItemCount="5"
+        app:wheelItemRadius="43dp"
+        app:wheelOffsetY="120dp"
+        app:wheelPadding="13dp"
+        app:wheelPosition="bottom"
+        app:wheelRadius="276dp" />
+
+    <ImageView
+        android:id="@+id/timage"
+        android:layout_width="238dp"
+        android:layout_height="222dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tdescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="217dp"
+        android:background="@color/lime_100"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Apple"
+        android:textColor="@color/amber_900"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

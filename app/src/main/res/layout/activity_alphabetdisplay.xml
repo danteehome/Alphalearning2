@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".Alphabetdetails"
     android:id="@+id/alphabetdisplaylayout"
-    android:background="@color/colorLime">
+    android:background="@drawable/wetpencils_large">
 
     <TextView
         android:id="@+id/textViewName"
@@ -20,7 +20,7 @@
         android:layout_marginTop="115dp"
         android:contentDescription="ABCDE"
         android:text="Name"
-        android:textSize="30sp"
+        android:theme="@style/fontForName"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp" />
 
@@ -33,7 +33,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
         android:text="Speech"
-        android:textSize="24sp"
+        android:theme="@style/fontForName"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="92dp" />
 
@@ -55,8 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_foldfunction"
         android:layout_alignParentStart="true"
+        android:theme="@style/fontForDesc"
         android:text="Description"
-        android:textSize="18sp"
         android:visibility="invisible" />
 
     <TextView
@@ -66,8 +66,10 @@
         android:layout_below="@+id/textViewDescription"
         android:layout_alignParentStart="true"
         android:text="Examples"
-        android:textSize="24sp"
-        android:textStyle="italic"
+        android:theme="@style/fontForDesc"
+        android:background="@color/orange_500"
+
+
         android:visibility="invisible" />
 
     <Button
@@ -77,18 +79,9 @@
         android:layout_height="38dp"
         android:layout_below="@+id/textViewSpeech"
         android:layout_marginStart="0dp"
-        android:text="More_details" />
+        android:text="Click me for more information!" />
 
-    <WebView
-        android:id="@+id/gifdisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="25dp"
-        android:layout_toEndOf="@+id/textViewName" />
+
 
     <ImageView
         android:id="@+id/picture"
@@ -104,8 +97,28 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewExamples"
         android:layout_centerVertical="true"
-        android:visibility="invisible"
-         />
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/toDraw"
+        android:layout_width="69dp"
+        android:layout_height="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="27dp"
+        app:srcCompat="@drawable/write" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="104dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/toDraw"
+        android:layout_alignStart="@+id/toDraw"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="0dp"
+        android:text="Click for writing practice!"
+        android:textColor="@color/purple_500" />
 
 
 </RelativeLayout>

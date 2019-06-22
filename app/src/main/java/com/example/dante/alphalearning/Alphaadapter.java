@@ -30,8 +30,6 @@ public class Alphaadapter extends ArrayAdapter<Alphalistviewconstructor> {
             if(v == null){
                 LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 v= layoutInflater.inflate(resource, parent, false);
-
-
             }
             ImageView imageView = (ImageView) v.findViewById(R.id.imageViewalpha);
             TextView textViewName = (TextView) v.findViewById(R.id.textViewName);

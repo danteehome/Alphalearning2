@@ -2,6 +2,7 @@
     <string name="app_name">AlphabetLearning</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Alphabetlist</string>
+    <string name="action_settings">Settings</string>
     <string-array name="alphabets">
         <item>A</item>
         <item>B</item>
@@ -9,9 +10,17 @@
         <item>D</item>
         <item>E</item>
 
+    </string-array>
 
+    <string-array name="abcde">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Candy</item>
+        <item>Doll</item>
+        <item>Evening</item>
 
     </string-array>
+
     <string name="descriptionfora">
         A is the first letter and the first vowel of the modern English alphabet and the ISO basic Latin alphabet. It is similar to the Ancient Greek letter alpha, from which it derives.
         The uppercase version consists of the two slanting sides of a triangle, crossed in the middle by a horizontal bar.
@@ -51,6 +60,7 @@
          /iː/
     </string>
 
+
     <string name="aexample">
         Apple
         Airplane
@@ -76,8 +86,28 @@
         Eat
         Evening
     </string>
-
-
+    <string name="notused"> <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item></string>
 
 
 </resources>
+
