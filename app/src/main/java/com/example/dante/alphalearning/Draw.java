@@ -17,7 +17,7 @@ import android.support.v7.widget.Toolbar;
 import com.android.graphics.CanvasView;
 
 
-public class Draw extends Navigate_page {
+public class Draw extends Alphabetdetails {
 
     private CanvasView customCanvas;
     private Button buttonpurple;
@@ -29,6 +29,7 @@ public class Draw extends Navigate_page {
     private Button buttonclear;
     private String flagreceive;
     private WebView gif;
+    private ImageView drawImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,30 +48,37 @@ public class Draw extends Navigate_page {
         this.buttonlime = (Button)this.findViewById(R.id.buttonlime);
         this.buttondraw = (Button)this.findViewById(R.id.buttondraw);
         this.buttonerase = (Button)this.findViewById(R.id.buttonerase);
+        this.drawImage = (ImageView)this.findViewById(R.id.drawImage);
         this.buttonclear = (Button)this.findViewById(R.id.buttonclear);
         this.gif=(WebView)this.findViewById(R.id.gif);
+
+
 
         switch (flagreceive) {
             case "1":
                 gif.loadUrl("file:///android_asset/a_cursiva.gif");
+                drawImage.setBackgroundResource(R.drawable.writea);
                 break;
             case "2":
                 gif.loadUrl("file:///android_asset/b_cursiva.gif");
+                drawImage.setBackgroundResource(R.drawable.writea);
                 break;
             case "3":
                 gif.loadUrl("file:///android_asset/c_cursiva.gif");
+                drawImage.setBackgroundResource(R.drawable.writea);
                 break;
             case "4":
                 gif.loadUrl("file:///android_asset/d_cursiva.gif");
+                drawImage.setBackgroundResource(R.drawable.writea);
                 break;
             case "5":
                 gif.loadUrl("file:///android_asset/e_cursiva.gif");
+                drawImage.setBackgroundResource(R.drawable.writea);
                 break;
-
         }
 
         this.customCanvas.setPaintStrokeColor(getResources().getColor(R.color.red_500));
-        this.customCanvas.setPaintStrokeWidth(20);
+        this.customCanvas.setPaintStrokeWidth(30);
 
         buttonpurple.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,14 +113,14 @@ public class Draw extends Navigate_page {
         buttondraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                customCanvas.setMode(CanvasView.Mode.DRAW);
+                customCanvas.setPaintStrokeColor(getResources().getColor(R.color.black));
 
             }
         });
         buttonerase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                customCanvas.setMode(CanvasView.Mode.ERASER);
+                customCanvas.setPaintStrokeColor(getResources().getColor(R.color.white));
 
             }
         });
@@ -123,9 +131,6 @@ public class Draw extends Navigate_page {
 
             }
         });
-
-
-
 
 
     }

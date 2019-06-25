@@ -7,7 +7,7 @@
     android:orientation="horizontal">
 
     <Button
-        android:id="@+id/buttonred"
+        android:id="@+id/buttonred2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
 
@@ -16,52 +16,52 @@
         android:background="@drawable/redbutton" />
 
     <Button
-        android:id="@+id/buttonyellow"
+        android:id="@+id/buttonyellow2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_toEndOf="@+id/buttonred"
+        android:layout_toEndOf="@+id/buttonred2"
         android:background="@drawable/yellowbutton" />
 
     <Button
-        android:id="@+id/buttonlime"
+        android:id="@+id/buttonlime2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/buttonyellow"
+        android:layout_toEndOf="@+id/buttonyellow2"
         android:background="@drawable/limebutton"
         android:gravity="bottom" />
 
     <Button
-        android:id="@+id/buttonpurple"
+        android:id="@+id/buttonpurple2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/buttonlime"
+        android:layout_toEndOf="@+id/buttonlime2"
         android:background="@drawable/purplebutton"
         android:gravity="bottom" />
 
     <Button
-        android:id="@+id/buttondraw"
+        android:id="@+id/buttondraw2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/buttonerase"
+        android:layout_toStartOf="@+id/buttonerase2"
         android:background="@drawable/drawbutton"
         android:gravity="bottom" />
 
     <Button
-        android:id="@+id/buttonerase"
+        android:id="@+id/buttonerase2"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/buttonclear"
+        android:layout_toStartOf="@+id/buttonclear2"
         android:background="@drawable/erasebutton"
         android:gravity="bottom" />
 
     <Button
-        android:id="@+id/buttonclear"
+        android:id="@+id/buttonclear2"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -69,35 +69,30 @@
         android:layout_marginTop="0dp"
         android:background="@drawable/clearbutton" />
 
-    <RelativeLayout
+    <com.android.graphics.CanvasView
+        android:id="@+id/canvas_drawing2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/drawImage2"
+        android:layout_alignTop="@+id/drawImage2"
+        android:layout_alignEnd="@+id/drawImage2"
+        android:layout_alignBottom="@+id/drawImage2"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="68dp" />
 
-        <com.android.graphics.CanvasView
-            android:id="@+id/canvas_drawing"
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="68dp" />
-
-        <ImageView
-            android:id="@+id/drawImage"
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="68dp"
-            android:contentDescription="background" />
-    </RelativeLayout>
-
-    <WebView
-        android:id="@+id/gif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/drawImage2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:contentDescription="background" />
+
 
 
 </RelativeLayout>

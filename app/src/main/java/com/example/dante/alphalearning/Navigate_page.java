@@ -3,7 +3,6 @@ package com.example.dante.alphalearning;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,12 +23,9 @@ public class Navigate_page extends AppCompatActivity {
         final ImageView toList = (ImageView) findViewById(R.id.toListbtn);
         final ImageView toStudy = (ImageView) findViewById(R.id.toStudybtn);
         final ImageView toDraw = (ImageView) findViewById(R.id.toDrawbtn);
-        final ImageView toContact = (ImageView) findViewById(R.id.toContactbtn);
+        final ImageView toTest = (ImageView) findViewById(R.id.toTestbtn);
         final ImageView music_control = (ImageView) findViewById(R.id.music_control);
         navigation = (RelativeLayout) findViewById(R.id.navigation);
-
-
-
 
 
         //background handler
@@ -39,10 +35,8 @@ public class Navigate_page extends AppCompatActivity {
         animationDrawable.start();
 
 
-        mediaPlayer =  MediaPlayer.create(getApplicationContext(),R.raw.bgm);
+        mediaPlayer =  MediaPlayer.create(Navigate_page.this,R.raw.bgm);
         music_control.setImageResource(R.drawable.smallmelody);
-
-
 
 
         //onclick
@@ -50,15 +44,15 @@ public class Navigate_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), AlphabetList.class);
-                mediaPlayer.release();
+                mediaPlayer.pause();
                 startActivity(intent);
             }
         });
         toDraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Draw.class);
-                mediaPlayer.release();
+                Intent intent = new Intent(getApplicationContext(), FreeDraw.class);
+                mediaPlayer.pause();
                 startActivity(intent);
             }
         });
@@ -66,8 +60,17 @@ public class Navigate_page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Learn.class);
-                mediaPlayer.release();
+                mediaPlayer.pause();
                 startActivity(intent);
+            }
+        });
+        toTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Quiz.class);
+                mediaPlayer.pause();
+                startActivity(intent);
+
             }
         });
 

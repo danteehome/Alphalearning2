@@ -6,6 +6,7 @@
     <color name="colorLime">#00FFFF</color>
     <color name="colorYellow">#FFFF00</color>
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
 
 
 </resources>

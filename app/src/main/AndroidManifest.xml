@@ -19,8 +19,9 @@
         <activity android:name=".Alphabetdetails" />
         <activity android:name=".Learn" />
         <activity android:name=".AlphabetList" />
-        <activity android:name=".Test" />
-        <activity android:name=".Draw"></activity>
+        <activity android:name=".Quiz" />
+        <activity android:name=".Draw" />
+        <activity android:name=".FreeDraw"></activity>
     </application>
 
 </manifest>

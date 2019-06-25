@@ -26,6 +26,13 @@ public class Learn extends Navigate_page {
     private static final int ITEM_COUNT = 5;
     static String[] alphabet={"a","b","c","d","e"};
     int[] photolist={R.drawable.apple,R.drawable.bananas,R.drawable.candy,R.drawable.doll,R.drawable.evening};
+    private WheelView wheelView;
+    private ImageView wimage;
+    private TextView wdescription;
+    private WebView wbackground;
+    private String[] wdesc;
+    private int[] wcolorlist={getResources().getColor(R.color.red_500), getResources().getColor(R.color.yellow_500),getResources().getColor(R.color.orange_500),getResources().getColor(R.color.cyan_a100),getResources().getColor(R.color.blue_grey_200),};
+
 
 
 
@@ -34,14 +41,13 @@ public class Learn extends Navigate_page {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_study);
 
-        final WheelView wheelView = (WheelView) findViewById(R.id.wheelview);
-        final ImageView wimage = (ImageView) findViewById(R.id.wimage);
-        final TextView wdescription = (TextView) findViewById(R.id.wdescription);
-        final WebView wbackground = (WebView) findViewById(R.id.wbackground);
+        wheelView = (WheelView) findViewById(R.id.wheelview);
+        wimage = (ImageView) findViewById(R.id.wimage);
+        wdescription = (TextView) findViewById(R.id.wdescription);
+        wbackground = (WebView) findViewById(R.id.wbackground);
+        wdesc = getResources().getStringArray(R.array.abcde);
 
 
-        final String[] wdesc = getResources().getStringArray(R.array.abcde);
-        final int [] wcolorlist={getResources().getColor(R.color.red_500), getResources().getColor(R.color.yellow_500),getResources().getColor(R.color.orange_500),getResources().getColor(R.color.cyan_a100),getResources().getColor(R.color.blue_grey_200),};
 
         //create data for the adapter
         List<Map.Entry<String, Integer>> entries = new ArrayList<Map.Entry<String, Integer>>(ITEM_COUNT);
@@ -66,14 +72,27 @@ public class Learn extends Navigate_page {
                 wdescription.setTextColor(wcolorlist[position]);
             }
         });
-
+        //listener
         wheelView.setOnWheelItemClickListener(new WheelView.OnWheelItemClickListener() {
             @Override
             public void onWheelItemClick(WheelView parent, int position, boolean isSelected) {
-                String msg = String.valueOf(position) + " " + isSelected;
-                Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+
+                if (position >= 2 && position<=19) {
+                    String msg = alphabet[position] + " is the" + (position + 1) + " th in alphabet";
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                } else if (position == 0) {
+                    String msg = alphabet[position] + " is the 1st in alphabet";
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                } else if (position == 1) {
+                    String msg = alphabet[position] + " is the 2nd in alphabet";
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                } else if (position == 2) {
+                    String msg = alphabet[position] + " is the 3rd in alphabet";
+                    Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+                }
             }
         });
+
 
         //initialise the selection drawable with the first contrast color
         wheelView.setSelectionColor(getContrastColor(entries.get(0)));
@@ -108,7 +127,7 @@ public class Learn extends Navigate_page {
         }
         return super.onOptionsItemSelected(item);
     }
-
+//adapter
     static class MaterialColorAdapter extends WheelArrayAdapter<Map.Entry<String, Integer>> {
         MaterialColorAdapter(List<Map.Entry<String, Integer>> entries) {
             super(entries);

@@ -11,6 +11,37 @@
         <item>E</item>
 
     </string-array>
+    <string-array name="allanswer">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+        <item>e</item>
+
+    </string-array>
+
+    <string-array name="correctanswer">
+    <item>a</item>
+    <item>b</item>
+    <item>c</item>
+    <item>d</item>
+    <item>e</item>
+    </string-array>
+    <string-array name="questions">
+    <item>_pple</item>
+    <item>_anana</item>
+    <item>_andy</item>
+    <item>_oll</item>
+    <item>_vening</item>
+    </string-array>
+    <string-array name="questionans">
+        <item>apple</item>
+        <item>banana</item>
+        <item>candy</item>
+        <item>doll</item>
+        <item>evening</item>
+    </string-array>
+
 
     <string-array name="abcde">
         <item>Apple</item>

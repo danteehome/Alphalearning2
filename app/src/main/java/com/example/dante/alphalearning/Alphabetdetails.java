@@ -36,11 +36,11 @@ public class Alphabetdetails extends AlphabetList {
 
 
         RelativeLayout relativeLayout=(RelativeLayout) findViewById(R.id.alphabetdisplaylayout);
-        TextView textViewName = (TextView) relativeLayout.findViewById(R.id.textViewName);
-        TextView textViewSpeech = (TextView) relativeLayout.findViewById(R.id.textViewSpeech);
+        final TextView textViewName = (TextView) relativeLayout.findViewById(R.id.textViewName);
+        final TextView textViewSpeech = (TextView) relativeLayout.findViewById(R.id.textViewSpeech);
         final TextView textViewDescription = (TextView) relativeLayout.findViewById(R.id.textViewDescription);
         final TextView textViewExamples = (TextView) relativeLayout.findViewById(R.id.textViewExamples);
-        ImageView imageViewphoto = (ImageView) relativeLayout.findViewById(R.id.picture) ;
+        final ImageView imageViewphoto = (ImageView) relativeLayout.findViewById(R.id.picture) ;
         final ImageView imageViewexample = (ImageView) relativeLayout.findViewById(R.id.examplealpha);
         final Button buttonmakesound = (Button) findViewById(R.id.makesound);
         final Button buttonunfold = (Button) findViewById(R.id.button_foldfunction);
@@ -68,7 +68,7 @@ public class Alphabetdetails extends AlphabetList {
 
         if (flagreceive != null) {
             switch (flagreceive) {
-                case "a":
+                case "1":
                     System.out.println("You pressed the first letter yay");
                     all.setName("Aa");
                     all.setDescription(getString(R.string.descriptionfora));
@@ -93,7 +93,7 @@ public class Alphabetdetails extends AlphabetList {
                     imageViewexample.setImageResource(R.drawable.apple);
 
                     break;
-                case "b":
+                case "2":
                     all.setName("Bb");
                     all.setDescription(getString(R.string.descriptionforb));
                     all.setExamples(getString(R.string.bexample));
@@ -119,7 +119,7 @@ public class Alphabetdetails extends AlphabetList {
                     imageViewexample.setImageResource(R.drawable.bananas);
 
                     break;
-                case "c":
+                case "3":
                     all.setName("Cc");
                     all.setDescription(getString(R.string.descriptionforc));
                     all.setExamples(getString(R.string.cexample));
@@ -146,7 +146,7 @@ public class Alphabetdetails extends AlphabetList {
                     imageViewexample.setImageResource(R.drawable.candy);
 
                     break;
-                case "d":
+                case "4":
                     all.setName("Dd");
                     all.setDescription(getString(R.string.descriptionford));
                     all.setExamples(getString(R.string.dexample));
@@ -172,7 +172,7 @@ public class Alphabetdetails extends AlphabetList {
                     imageViewphoto.setImageResource(R.drawable.dd);
                     imageViewexample.setImageResource(R.drawable.doll);
                     break;
-                case "e":
+                case "5":
                     all.setName("Ee");
                     all.setDescription(getString(R.string.descriptionfore));
                     all.setExamples(getString(R.string.eexample));
