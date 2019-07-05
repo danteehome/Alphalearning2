@@ -31,7 +31,7 @@ public class Learn extends Navigate_page {
     private TextView wdescription;
     private WebView wbackground;
     private String[] wdesc;
-    private int[] wcolorlist={getResources().getColor(R.color.red_500), getResources().getColor(R.color.yellow_500),getResources().getColor(R.color.orange_500),getResources().getColor(R.color.cyan_a100),getResources().getColor(R.color.blue_grey_200),};
+    private int[] wcolorlist={R.color.red_500, R.color.yellow_500,R.color.orange_500,R.color.cyan_a100,R.color.blue_grey_200};
 
 
 
